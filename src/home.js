@@ -5,6 +5,8 @@ const loadHome = () => {
     const div = document.createElement('div');
     div.innerHTML = `
        <h2>Home</h2>
+       <p>All Tasks</p>
+       
     `;
     content.appendChild(div);
 };
