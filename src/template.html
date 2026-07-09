@@ -3,19 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Restaurant</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tasks</title>
 </head>
 <body>
-    <header>
-        <h1 class="nav-logo">To do List</h1>
-        <nav>
-            <button id="homeBtn">Home</button>
-            <button id="impBtn">Important</button>
-            <button id="prjBtn">Projects</button>
-            <button id="deletedBtn">Deleted</button>
-        </nav>
-    </header>
-    <div id="content"></div>
+
+<div class="app">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            Tasks
+            <span>Good morning</span>
+        </div>
+
+        <div class="nav-section">Menu</div>
+        <div class="nav-item active" id="homeBtn">&#9675; Home</div>
+        <div class="nav-item" id="impBtn">&#9733; Important</div>
+        <div class="nav-item" id="todayBtn">&#128197; Today</div>
+        <div class="nav-item" id="deletedBtn">&#128465; Deleted</div>
+
+        <div class="nav-section">Projects</div>
+        <div id="projectNav"></div>
+        <div class="nav-item nav-item-add" id="addProjectNav">+ New project</div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content"></main>
+
+    <!-- RIGHT ASIDE -->
+    <aside class="aside">
+
+        <div>
+            <div class="aside-title">Calendar</div>
+            <div class="calendar">
+                <div class="cal-header">
+                    <button class="cal-nav" id="calPrev">&#8249;</button>
+                    <span class="cal-month" id="calMonth"></span>
+                    <button class="cal-nav" id="calNext">&#8250;</button>
+                </div>
+                <div class="cal-grid" id="calGrid"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="aside-title">Upcoming</div>
+            <div class="upcoming" id="upcomingList"></div>
+        </div>
+
+        <div>
+            <div class="aside-title">Progress</div>
+            <div class="stat-row">
+                <div class="stat-card">
+                    <div class="stat-val" id="statTotal">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val success" id="statDone">0</div>
+                    <div class="stat-label">Done</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val danger" id="statHigh">0</div>
+                    <div class="stat-label">High priority</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val accent" id="statProjects">0</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+</div>
+
 </body>
 </html>
